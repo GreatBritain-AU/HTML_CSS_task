@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
     <title>Form</title>
 </head>
 <body>
+    <a href="../../index.html">Повернутися на головну</a>
     <form>
         <fieldset>
             <legend>Personal info</legend>
@@ -22,18 +24,120 @@
                 <input type="datetime-local" id="bDay">
             </div>
             <p>Gender</p>
-            <input type="radio" id="male">
             <ladel for="male">Male</ladel>
-
-            <input type="radio" id="female">
+            <input name="gender" type="radio" id="male">
+            
             <ladel for="female">Female</ladel>
+            <input name="gender" type="radio" id="female">
+                        
+            <div class="exp">
+                <ladel for="dExp">Drive experience</ladel>
+                <select name="exp-list" id="dExp">
+                    <option value="---">---</option>
+                    <option value="more then 5 years">more then 5 years</option>
+                    <option value="less then 5 years">less then 5 years</option>
+                </select>
+            </div>
         </fieldset>
         <fieldset>
             <legend>Contacts</legend>
+            <div class="thCouple">
+                <ladel for="e-mail">Email</ladel>
+                <input type="email" id="e-mail">
+            </div>
+
+            <div class="foCouple">
+                <ladel for="phone">Phone</ladel>
+                <input type="tel" id="phone">
+            </div>
+
+            <div class="fiCouple">
+                <ladel for="address">Address</ladel>
+                <textarea name="inp-address" id="address"></textarea>
+            </div>
         </fieldset>
         <fieldset>
             <legend>Car info</legend>
+            <div class="brand">
+                <ladel for="brand">Brand</ladel>
+                <select name="brand-list" id="brand">
+                    <option value="---">---</option>
+                    <option value="Ford">Ford</option>
+                    <option value="Volkswagen">Volkswagen</option>
+                    <option value="Volvo">Volvo</option>
+                </select>
+            </div>
+
+            <div class="car-model">
+                <ladel for="model">Model</ladel>
+                <select name="model-list" id="model">
+                    <option value="---">---</option>
+                    <option value="Ford Focus">Ford Focus</option>
+                    <option value="Ford Mustang">Ford Mustang</option>
+                    <option value="Volkswagen Golf">Volkswagen Golf</option>
+                    <option value="Volkswagen Passat">Volkswagen Passat</option>
+                    <option value="Volvo XC60">Volvo XC60</option>
+                    <option value="Volvo S90">Volvo S90</option>
+                </select>
+            </div>
+
+            <div class="used">
+                <ladel for="usedCh">Used</ladel>
+                <input type="checkbox" id="usedCh">
+            </div>
+
+            <div class="form-elem">
+                    <div class="color-name">Color</div>
+                    <label for="red">Red</label>
+                    <input type="radio" name="color" id="red" checked>
+
+                    <label for="blue">Blue</label>
+                    <input type="radio" name="color" id="blue">
+
+                    <label for="black">Black</label>
+                    <input type="radio" name="color" id="black">
+
+                    <label for="white">White</label>
+                    <input type="radio" name="color" id="white">
+
+                    <label for="gray">Gray</label>
+                    <input type="radio" name="color" id="gray">
+
+                </div>
+
+                <div class="car-price">
+                    <label for="price">Price</label>
+                    <input 
+                        type="range" 
+                        name="price" 
+                        id="price"
+                        min="10"
+                        max="100"
+                        step="10"
+                        list="price-list">
+
+                        <datalist id="price-list">
+                            <option value="10"></option>
+                            <option value="20"></option>
+                            <option value="30"></option>
+                            <option value="40"></option>
+                            <option value="50"></option>
+                            <option value="60"></option>
+                            <option value="70"></option>
+                            <option value="80"></option>
+                            <option value="90"></option>
+                            <option value="100"></option>
+                        </datalist>
+                </div>
+
         </fieldset>
+
+            <div class="form-elem-btn">
+                <input type="reset" value="Cancel">
+                <input type="submit" value="Ok">
+            </div>
+
+        
     </form>
 </body>
 </html>
